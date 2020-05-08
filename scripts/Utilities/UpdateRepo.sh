@@ -6,6 +6,7 @@ then
   git add .
   git commit -m "$message"
   git push
+  echo "Staged, committed, and pushed changes!"
 else
   echo "You must run this script from a Git repository directory!"
 fi
