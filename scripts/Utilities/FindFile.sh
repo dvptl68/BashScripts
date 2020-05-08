@@ -5,7 +5,7 @@ for dir in scripts/*; do
     cd $dir
     for file in *; do
       if [ "$file" = "$1" ]; then
-        found=true
+        found="$dir/$file"
       fi
     done
     cd ..

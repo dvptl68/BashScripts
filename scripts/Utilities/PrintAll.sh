@@ -1,11 +1,9 @@
 #!/bin/bash
 
-bold=$(tput bold)
-normal=$(tput sgr0)
-
+echo
 for dir in scripts/*; do
     cd $dir
-    echo "${bold}${PWD##*/}${normal}"
+    echo "$(tput bold)${PWD##*/}$(tput sgr0)"
     for file in *; do
       echo $file
     done
