@@ -1,4 +1,4 @@
 #!/bin/bash
 
-read -p "Enter any text: "  text
+read -p "Enter a string: "  string
 echo "You entered: $text"
