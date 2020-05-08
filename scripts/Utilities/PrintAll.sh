@@ -13,5 +13,3 @@ for dir in scripts/*; do
     cd ..
     cd ..
 done
-
-read -p "Enter the name of the file you would like to execute: "  fileName
