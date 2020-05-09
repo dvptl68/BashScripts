@@ -3,7 +3,7 @@
 if [ -d .git ]
 then
   read -p "Enter the commit message: "  message
-  read -p "Would you like to commit and push all changes with the following message: \"${message}\" (y/n)? "  confirm
+  read -p "Would you like to commit and push all changes with the following message: $(tput bold)${message}$(tput sgr0) (y/n)? "  confirm
   if [ "$confirm" = "y" ]; then
     git add .
     git commit -m "$message"
