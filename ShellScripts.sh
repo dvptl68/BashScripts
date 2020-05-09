@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #Make all script files executable and print all script files
+echo
 ./scripts/Utilities/MakeExecutable.sh
 ./scripts/Utilities/PrintAll.sh
 
