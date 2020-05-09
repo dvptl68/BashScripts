@@ -9,9 +9,9 @@ until [ "$num" = "" ]; do
       echo "You must enter an integer!"
     else
       numbers[i]=$num
+      ((i++))
     fi
   fi
-  ((i++))
 done
 
 length=${#numbers[@]}
