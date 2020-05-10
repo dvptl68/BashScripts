@@ -54,3 +54,9 @@ while [ $interval -lt $n ]; do
     ((subInterval++))
   fi
 done
+
+for l in `seq $dec`; do
+  ((subInterval*=10))
+done
+estimate=$(($(($subInterval*4))/$interval))
+echo "${estimate:0:1}.${estimate:1:$dec}"
