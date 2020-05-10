@@ -12,7 +12,8 @@ until [ -z "$fileName" ]; do
   if [ "$found" = "false" ]; then
     echo "You must enter a valid file name!"
   else
-    echo $found
+    "./${found}"
+    echo
   fi
   echo
   read -p "Enter the name of the file you would like to execute (or nothing to quit): "  fileName
