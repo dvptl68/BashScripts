@@ -6,7 +6,7 @@ until [ "$num" = "" ]; do
   read -p "Enter any number (or nothing to quit):"  num
   if [ "$num" != "" ]; then
     if ! [[ "$num" =~ ^[0-9]+$ ]]; then
-      echo "You must enter an integer!"
+      echo "You must enter a positive integer!"
     else
       numbers[i]=$num
       ((i++))
