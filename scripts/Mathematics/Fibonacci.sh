@@ -25,8 +25,9 @@ else
   echo -n "${numbers[0]}, ${numbers[1]}"
   i=2
   while [ ${numbers[$(($i-1))]} -lt $n ]; do
-    numbers[i]=$(($numbers[$(($i-1))]+$numbers[$(($i-2))]))
-    ((i++))
+    numbers[$i]=$((${numbers[$(($i-1))]}+${numbers[$(($i-2))]}))
     echo -n ", ${numbers[$i]}"
+    ((i++))
   done
+  
 fi
