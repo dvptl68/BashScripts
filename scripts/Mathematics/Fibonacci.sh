@@ -22,12 +22,22 @@ if [ "$n" = "1" ]; then
 else
   numbers[0]=1
   numbers[1]=1
-  echo -n "${numbers[0]}, ${numbers[1]}"
   i=2
   while [ ${numbers[$(($i-1))]} -lt $n ]; do
     numbers[$i]=$((${numbers[$(($i-1))]}+${numbers[$(($i-2))]}))
-    echo -n ", ${numbers[$i]}"
     ((i++))
   done
-  
+  length=${#numbers[@]}
+  ((length--))
+  if [ "${numbers[$length]}" = "$n" ]; then
+    echo "$n is a Fibonacci number! The sequence is: "
+    ((length--))
+    for j in $(seq 0 $length); do
+      echo -n "${numbers[$j]}, "
+    done
+    ((length++))
+    echo -n "${numbers[length]}"
+  else
+    echo -n "$n is not a Fibonacci number"
+  fi
 fi
